@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  [type="checkbox"] {
+    @apply w-11 h-0 cursor-pointer inline-block;
+    @apply focus:outline-0;
+    @apply border-0;
+    @apply focus:ring-offset-transparent;
+    @apply focus:ring-transparent;
+    @apply focus-within:ring-0;
+    @apply focus:shadow-none;
+
+    @apply after:absolute before:absolute;
+    @apply after:top-0 before:top-0;
+    @apply after:block before:inline-block;
+    @apply before:rounded-full after:rounded-full;
+
+    @apply after:content-[''] after:w-5 after:h-5 after:mt-0.5 after:ml-0.5;
+    @apply after:shadow-md after:duration-100;
+
+    @apply before:content-[''] before:w-10 before:h-full;
+    @apply before:shadow-[inset_0_0_#000];
+
+    @apply after:bg-white;
+    @apply before:bg-gray-300;
+    @apply before:checked:bg-lime-500;
+    @apply checked:after:duration-300;
+
+    @apply disabled:after:bg-opacity-75 disabled:cursor-not-allowed;
+    @apply disabled:checked:before:bg-opacity-40;
+  }
+}
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  place-items: center;
+  place-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
